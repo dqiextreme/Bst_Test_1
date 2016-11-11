@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+   
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p>
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+        <input id="boton 1" type="button" value="button 1" onclick="bt1()" />
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+        <input id="boton 2" type="button" value="button 2" onclick="bt2()" />
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+        <input id="boton 3" type="button" value="button 3" onclick="bt4()" />
+      <h3>Column 3</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+<div id="result" style="text-align:center;">
+    <h2>here</h2>
+</div>
+
+@Scripts.Render("~/js_test/func.js")
+<script>
+    var con = 1;
+    function js1() {
+        ////$('#pos0').append(sho3);
+        //// $('#resultado table').remove();
+        $("#result h2").remove();
+        $('#result').load('/Test/jstest/', { id: 1 });
+    }
+
+    function ajax1() {
+        $.ajax({
+            url: '/Test/jstest2',
+            data: { id: con }
+        }).done(function (data) {
+            $('#result').append(data);
+            con++;
+        });
+    }
+
+
+    function divt() {
+        //var a = $("#Text1").val();
+        //$('#divtest').load('/Home/_test_partial32/', { id: 1 });
+        //alert("FINISH");
+        $('#divtest').load('/Controlador/metodo/', { variable: valor });
+        alert("FINISH");
+    }
+
+    function test() {
+        //$.ajax({
+        //    url: '/Home/_test_partial32',
+        //    data: { id: 1 }
+        //}).done(function () {
+        //    alert('done');
+        //});
+        $.ajax({
+            url: '/Controlador/metodo',
+            data: { variable: valor }
+        }).done(function () {
+            alert('done');
+        });
+    }
+</script>

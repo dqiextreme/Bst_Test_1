@@ -1,0 +1,57 @@
+﻿@{
+  ViewBag.Title = "Basic Web Grid";
+}
+<input id="Button1" type="button" value="button" onclick="divt()" />
+
+    <div class="row">
+    
+        <div class="col-lg-1 col-lg-offset-1 col-md-1 col-md-offset-1 col-sm-1 col-sm-offset-1 col-xs-3 col-xs-offset-1" style="background-color:black;">
+            <label>1</label>
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-4" style="background-color:aqua;">
+            <label>2</label>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4" style="background-color:black;">
+            <label>3</label>
+        </div>
+
+    </div>
+
+<h2>Table 1 </h2>
+
+    @Html.Partial("_test_partial")
+
+
+<hr />
+
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+<script>
+    //function divt() {
+    //    var a = $("#Text1").val()
+    //    //$('#divtest').load('/Home/_test_partial3/1');
+    //    $('#divtest').load('/Home/_test_partial3/', { id: 1, id2: a })
+    //    alert("FINISH")
+    //}
+    function divt() {
+        $('#divtest').load('/Home/_test_partial32/1')
+        alert("FINISH")
+    }
+</script>
+

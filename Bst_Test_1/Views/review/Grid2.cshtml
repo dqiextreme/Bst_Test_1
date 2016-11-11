@@ -1,0 +1,81 @@
+﻿@{
+  ViewBag.Title = "Basic Web Grid";
+}
+<h2>Table</h2>
+<div class="row"><div class="col-lg-10 col-lgoffset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+    <table>
+    @foreach (var item in ViewBag.res)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Archivo</td>
+            <td>@item.Ruta</td>
+        </tr>
+    }
+    </table>
+</div></div>
+
+<hr />
+<h2>Table 2</h2>
+<div class="row"><div class="col-lg-7 col-lgoffset-4 col-md-7 col-md-offset-4 col-sm-7 col-sm-offset-4">
+    <table>
+    @foreach (var item in ViewBag.res)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Archivo</td>
+            <td>@item.Ruta</td>
+        </tr>
+    }
+    </table>
+</div></div>
+
+
+<hr />
+<h2>Razor WebGrid (ViewBag)</h2>
+<div class="row"><div class="col-lg-10 col-lgoffset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+    @{
+        var grid2 = new WebGrid(ViewBag.res);
+            @grid2.GetHtml();
+    }
+</div></div>
+
+
+<hr />
+<h2>Razor WebGrid (Ienumerable)</h2>
+<div class="row"><div class="col-lg-10 col-lgoffset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+@{
+    var grid = new WebGrid(Model, defaultSort:"Name");
+        @grid.GetHtml()
+}
+</div></div>
+
+
+@*<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+</style>*@
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+

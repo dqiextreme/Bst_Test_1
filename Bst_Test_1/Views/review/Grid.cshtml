@@ -1,0 +1,56 @@
+﻿@{
+  ViewBag.Title = "Basic Web Grid";
+}
+<h2>Por ViewBag caiman</h2>  
+<table>
+@foreach (var item in ViewBag.res)
+{
+    <tr>
+        <td>@item.ID</td>
+        <td>@item.Archivo</td>
+        <td>@item.Ruta</td>
+    </tr>
+    
+}
+</table>
+
+<h2>Por ViewBag</h2>
+@{
+    var grid2 = new WebGrid(ViewBag.res);
+        @grid2.GetHtml()
+}
+
+<h2>Por Ienumerable</h2>
+@{
+    var grid = new WebGrid(Model, defaultSort:"Name");
+        @grid.GetHtml()
+}
+
+
+@*<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+</style>*@
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>

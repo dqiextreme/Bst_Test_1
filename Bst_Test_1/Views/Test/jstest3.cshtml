@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "jstest3";
+}
+
+<h2>jstest3</h2>
+
+@*<h2>Por ViewBag</h2>  
+<table>
+@foreach (var item in ViewBag.res)
+{
+    <tr>
+        <td>@item.ID</td>
+        <td>@item.Archivo</td>
+        <td>@item.Ruta</td>
+    </tr>
+    
+}
+</table>*@
+
+@*<h2>Por ViewBag webgrid</h2>
+@{
+    var grid2 = new WebGrid(ViewBag.res);
+        @grid2.GetHtml()
+}*@
+
+@*<ul class="list-group">
+    @foreach (var item in ViewBag.res)
+    {
+        <li class="list-group-item">@item.ID</li>
+        <li class="list-group-item">@item.Archivo</li>
+        <li class="list-group-item">@item.Ruta</li>
+    }
+</ul>
+<h2>-----------------------------------</h2>*@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <ul class="list-group">
+                @foreach (var item in ViewBag.res)
+                {
+                    <li class="list-group-item">@item.Archivo
+                        <span class="badge">@item.ID</span></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+                                    
