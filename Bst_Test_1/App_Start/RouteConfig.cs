@@ -22,8 +22,8 @@ namespace Bst_Test_1
             routes.MapRoute(
                 name: "Def", // any name meaningful for you is right
                 url: "{controller}/{action}",
-                //defaults: new { controller = "Home", action = "Index" }
                 defaults: new { controller = "Test", action = "Index" }
+                //defaults: new { controller = "Test", action = "jstest4" }
             );
         }
     }

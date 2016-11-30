@@ -2,6 +2,7 @@
 <Schema Namespace="test_linqsql1Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="test_linqsql1Entities" p1:LazyLoadingEnabled="true">
     <EntitySet Name="Adjunto" EntityType="test_linqsql1Model.Adjunto" />
+    <EntitySet Name="Employees" EntityType="test_linqsql1Model.Employees" />
   </EntityContainer>
   <EntityType Name="Adjunto">
     <Key>
@@ -10,5 +11,15 @@
     <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="Archivo" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="true" />
     <Property Name="Ruta" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="Salary" Nullable="false" />
+    <Property Type="String" Name="ccodsunagro" MaxLength="30" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

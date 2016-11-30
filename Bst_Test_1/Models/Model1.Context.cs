@@ -26,5 +26,6 @@ namespace Bst_Test_1.Models
         }
     
         public DbSet<Adjunto> Adjunto { get; set; }
+        public DbSet<Employees> Employees { get; set; }
     }
 }

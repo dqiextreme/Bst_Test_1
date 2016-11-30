@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="83b323f45f5f4f5fbea98ab28093b35f" Name="Diagrama1">
         <EntityTypeShape EntityType="test_linqsql1Model.Adjunto" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="test_linqsql1Model.Employees" Width="1.5" PointX="5.919515023901833" PointY="7.5784221177820221" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

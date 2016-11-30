@@ -35,3 +35,20 @@ function bt4() {
         con++;
     });
 }
+
+function bt5() {
+    $.ajax({
+        url: '/Test/jstest4',
+        data: { id: 1 }
+    }).success(function (data) {
+        $('#result').prepend(data);
+    });
+}
+
+function bt55() {
+    $('body').load('/Test/fuck/', { id: 1, id2 : 2 });
+}
+function mod2() {
+    alert();
+    $("#myModal").modal();
+}

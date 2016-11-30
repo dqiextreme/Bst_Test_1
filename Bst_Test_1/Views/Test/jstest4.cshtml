@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "jstest4";
+}
+
+
+
+@{
+    List<Bst_Test_1.Models.Adjunto> lstt = new List<Bst_Test_1.Models.Adjunto>();
+    lstt = ViewBag.list1;
+    
+    var t222 = TempData["t1"] as Bst_Test_1.Models.Adjunto;
+}
+
+<h4>lsst</h4>
+
+
+    @Response.Redirect("www.google.co.ve");
+@if (lstt.Count > 1) {
+    @Html.Action("Ntes", "Test");  
+}
+else {
+    
+    
+}
+
+
+
+ 
+@foreach (var p in lstt)
+{
+    <h4>@p.ID</h4>
+    <br />
+    <h4>@p.Archivo</h4>
+    <br />
+    <h4>@p.Ruta</h4>
+    <br />
+}
+
+
+@*@foreach (var p in a1)
+{
+    <h4>@p.ID</h4>
+    <br />
+    <h4>@p.Archivo</h4>
+    <br />
+    <h4>@p.Ruta</h4>
+    <br />
+}*@
+@*@foreach (var p in Model)
+{
+    <h4>@p.ID</h4>
+    <br />
+    <h4>@p.Archivo</h4>
+    <br />
+    <h4>@p.Ruta</h4>
+    <br />
+}*@
+@*<h4>@test</h4>
+    <br />
+    <br />
+@foreach (var p in lstt)
+{
+    <h4>@p.ID</h4>
+    <br />
+    <h4>@p.Archivo</h4>
+    <br />
+    <h4>@p.Ruta</h4>
+    <br />
+}*@
